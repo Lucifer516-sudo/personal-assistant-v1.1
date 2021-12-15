@@ -1,0 +1,48 @@
+assistant: 								| 								|
+	src: 								| 								|
+		core: 							| 								|
+			intelligent_todo_list_with_notifier: 		| 								|
+			wikipedia_responses: 				| 								|
+			wolframalpha: 					| 								|
+			weather_notifications: 				| 								|
+			reminders: 					| 								|
+				todos: 					| 								|
+			budget: 					| 								|
+			weather: 					| 								|
+		data_handling: 						| 								|
+			databases: 					| 								|
+			data_handler: 					| 								|
+				account_creator.py 			| 								|
+				todos_handler.py 			| 								|
+				reminders_handler.py 			| 								|
+		logs: 							| 								|
+			log_files: 					| 								|
+			logger: 					| 								|
+								  	| 								|
+________________________________________________________________________/---------------] 						|
+											| 						|
+											| 						|
+________________________________________________________________________________________|_______________________________________________/									
+	
+										  MAIN-COMPONENTS
+ 		   								  ---------------
+											 |
+											/ \
+_______________________________________________________________________________________|   |
+UI: 										       |   |
+* Loading Bar 									       |   |
+* Home Screen 									       |   |
++ Login screen 									       |   |
+	+ Account 					 			       |   |
+		- Budgets    							       |   |
+		- Reminder 							       |   |
+		- Wikipedia && Wolframalpha 					       |   |
+_______________________________________________________________________________________/   |
+											   |______________________________________________________________________________
+											   / Database
+
+
+
+
+
+

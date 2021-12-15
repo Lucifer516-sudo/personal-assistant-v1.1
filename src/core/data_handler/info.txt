@@ -1,0 +1,1 @@
+wikipedia o/p and wolframalpha o/p will be added to the db and the all those will be 
