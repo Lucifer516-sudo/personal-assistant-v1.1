@@ -1,4 +1,4 @@
-../../src/
+src/
 │
 ├── _main/
 │   │
@@ -14,25 +14,10 @@
 │   │   ├── check_for_main_dir_if_not_exists_create_it.py
 │   │   └── function_check_internet.py
 │   │
-│   └── run_pa.py
+│   ├── run_pa.py
+│   └── signup_.py
 │
 ├── core/
-│   │
-│   ├── PA_ACs/
-│   │   ├── _ACs.py
-│   │   ├── _BudgetACs.py
-│   │   ├── _RemindersACs.py
-│   │   └── _TodosACs.py
-│   │
-│   ├── __pycache__/
-│   │   ├── global_info.cpython-310.pyc
-│   │   └── global_info.cpython-39.pyc
-│   │
-│   ├── budget_handler/
-│   │   ├── account_creator.py
-│   │   ├── authorizor.py
-│   │   ├── budget_info_getter.py
-│   │   └── what_inputs_we_will_be_getting.txt
 │   │
 │   ├── configurer/
 │   │   │
@@ -41,27 +26,7 @@
 │   │   │
 │   │   └── directories_creator.py
 │   │
-│   ├── data_handler/
-│   │   ├── budgets_adder.py
-│   │   ├── info.txt
-│   │   ├── main_db_handler.py
-│   │   └── wolframalpha_query_and_output.py
-│   │
-│   ├── load_screen_printer/
-│   │   │
-│   │   ├── __pycache__/
-│   │   │   ├── load_screen.cpython-310.pyc
-│   │   │   └── load_screen.cpython-39.pyc
-│   │   │
-│   │   └── load_screen.py
-│   │
-│   ├── logg_ing/
-│   │   │
-│   │   └── logguru/
-│   │       ├── __init__.py
-│   │       └── main_logger.py
-│   │
-│   │
-│   └── global_info.py
+│   ├── global_info.py
+│   └── sqlite_execute_stmnt.py
 │
 └── available_rich_emojis.txt
