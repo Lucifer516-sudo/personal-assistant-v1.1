@@ -58,7 +58,7 @@ def make_the_home_dir_to_save_the_db():
 
         files_inside_db_folder = os.listdir(f"{HOME_DIR()}{os.path.sep}{dir_name}{os.path.sep}{database_folder_name}")
         if database_file_name not in files_inside_db_folder:
-            os.system(f"touch {HOME_DIR()}{os.path.sep}{dir_name}{os.path.sep}{database_folder_name}{os.path.sep}{database_file_name}")
+            os.system(f"touch {HOME_DIR()}{os.path.sep}{dir_name}{os.path.sep}{database_folder_name}{os.path.sep}{database_file_name}.db")
             database_file_created = False 
     
         if ACCOUNTS_DB_NAME not in files_inside_db_folder:
