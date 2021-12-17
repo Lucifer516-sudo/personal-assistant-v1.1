@@ -51,6 +51,8 @@ ACCOUNTS_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_
 
 WOLFRAMALPHA_QUERY_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{WOLFRAMALPHA_QUERY_DB_TABLE_NAME}.db")
 
+LOGS_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{LOGS_DB_NAME}.db") 
+
 # All Modules Being imported
 ALL_MODULES_IMPORTED = [
         "os",
