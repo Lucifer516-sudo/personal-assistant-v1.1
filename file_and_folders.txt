@@ -1,32 +1,15 @@
-src/
+../../src/
 │
 ├── _main/
-│   │
-│   ├── menu/
-│   │   └── info.txt
-│   │
-│   ├── prechecks/
-│   │   │
-│   │   ├── __pycache__/
-│   │   │   ├── check_for_main_dir_if_not_exists_create_it.cpython-310.pyc
-│   │   │   └── function_check_internet.cpython-310.pyc
-│   │   │
-│   │   ├── check_for_main_dir_if_not_exists_create_it.py
-│   │   └── function_check_internet.py
-│   │
-│   ├── run_pa.py
-│   └── signup_.py
 │
 ├── core/
 │   │
 │   ├── configurer/
-│   │   │
-│   │   ├── __pycache__/
-│   │   │   └── directories_creator.cpython-310.pyc
-│   │   │
 │   │   └── directories_creator.py
 │   │
+│   ├── common_database_handling_statements.py
 │   ├── global_info.py
-│   └── sqlite_execute_stmnt.py
+│   ├── log_statements.py
+│   └── test.sqlite3
 │
 └── available_rich_emojis.txt
