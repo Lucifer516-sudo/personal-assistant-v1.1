@@ -10,15 +10,12 @@ class DB:
         This will only have the common data handling functionalities
     ___________________________________________________________________________
     """
-    def __init__(self,db_name,table_name,row_data) -> None:
+    def __init__(self,db_name: str, table_name: str, row_data: list) -> None:
         self.db_name = db_name
         self.table_name = table_name
         self.row_data = row_data
 
-    def connect_to_database(self):
-        pass
-
-    def write(self,data):
+    def write(self,data:dict):
         """
         Common statements :
             table creation => CREATE TABLE IF NOT EXISTS `table name` (`row1` type, `row2` type, ... 'rowx' type)
@@ -27,5 +24,18 @@ class DB:
         """
         database = sqlite3.connect(self.db_name)
         csr = database.cursor()
-        create_table = f"CREATE TABLE IF NOT EXISTS {self.table_name} (  )"
+        row_data_string = ""
+        for i in list(self.row_data):
+            row_data_string += f"{i} text, "
+
+        create_table = f"CREATE TABLE IF NOT EXISTS {self.table_name} ({row_data_string})"
+        qstion_marks = ""
+
+        for _ in data:
+            qstion_marks += "?, "
+
+        insert_data = f"INSERT INTO {self.table_name} VALUES (qstion_marks)"
         csr.execute(create_table)
+        csr.execute(insert_data,tuple(data.values()))
+        database.commit()
+        database.close()

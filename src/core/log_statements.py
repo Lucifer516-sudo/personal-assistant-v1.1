@@ -1,3 +1,11 @@
+from core.global_info import (
+    LOGS_DB_NAME,
+    LOGS_DB_PATH,
+    LOGS_DB_ROW_ONE,
+    LOGS_DB_TABLE_NAME,
+)
+from core.common_database_handling_statements import DB
+
 class Logging:
     """
     Created this class just bcoz i currently dont know how to log the log info to a file tho
@@ -5,6 +13,10 @@ class Logging:
     def __init__(self,date_time,log_statement) -> None:
         self.date_time = date_time # Date And Time to store to the database
         self.log_statement = log_statement # ANd log statement to log
+
+    def real_logging(self,db_name,table_name,row_data):
+        db = DB(db_name,table_name,row_data)
+        db.write([])
 
     def log(self,cout=False):
         if cout != True:
