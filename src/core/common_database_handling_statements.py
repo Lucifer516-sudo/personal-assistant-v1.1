@@ -1,5 +1,5 @@
 import sqlite3
-from typing import Dict, List
+from typing import Dict
 
 class DB:
     """
@@ -10,7 +10,7 @@ class DB:
         This will only have the common data handling functionalities
     ___________________________________________________________________________
     """
-    def __init__(self,db_connection,table_name,row_data) -> None:
+    def __init__(self,db_name,table_name,row_data) -> None:
         self.db_name = db_name
         self.table_name = table_name
         self.row_data = row_data
@@ -25,4 +25,7 @@ class DB:
             insertion of data => INSERT INTO `table name` VALUES (?, ?, ?, ... ?)
 
         """
-        database = sqlite3.connect(self)
+        database = sqlite3.connect(self.db_name)
+        csr = database.cursor()
+        create_table = f"CREATE TABLE IF NOT EXISTS {self.table_name} (  )"
+        csr.execute(create_table)

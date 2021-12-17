@@ -14,6 +14,15 @@ MAIN_DB_ROW_ONE = [
         "PATH_LOCATED"
         ]
 
+# Logs DB
+LOGS_DB_NAME = "PAL-LOGS"
+LOGS_DB_TABLE_NAME = "LOGS"
+LOGS_DB_ROW_ONE = [
+        "DATE_AND_TIME",
+        "LOG_STATEMENT"
+        ]
+
+
 # Account DB :
 ACCOUNT_DB_TABLE_NAME = "ACCOUNT_DETAILS"
 ACCOUNT_DB_ROW_ONE = [
