@@ -1,5 +1,4 @@
 import sqlite3
-from typing import Dict
 
 class DB:
     """
@@ -39,3 +38,12 @@ class DB:
         csr.execute(insert_data,tuple(data.values()))
         database.commit()
         database.close()
+        print("commit status : OK")
+
+d = DB("test.sqlite3","test_table_name",row_data=["row1","row2","row3"])
+data = {
+        "row1": "1",
+        "row2" : "2",
+        "row3" : "3"
+        }
+d.write(data)

@@ -80,4 +80,4 @@ def make_the_home_dir_to_save_the_db():
 def make_it_as_a_executable_program():
     pass
 
-#make_the_home_dir_to_save_the_db()
+make_the_home_dir_to_save_the_db()
