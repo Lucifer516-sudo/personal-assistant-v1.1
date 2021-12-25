@@ -41,7 +41,7 @@ class DB:
         csr.execute(insert_data,tuple(data.values()))
         database.commit()
         database.close()
-        print("commit status : OK")
+#        print("commit status : OK")
 
 # d = DB("test.sqlite3","test_table_name",row_data=["row1","row2","row3"])
 # data = {
