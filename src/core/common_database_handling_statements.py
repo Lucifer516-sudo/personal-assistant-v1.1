@@ -27,23 +27,26 @@ class DB:
         for i in list(self.row_data):
             row_data_string += f"{i} text, "
 
+        row_data_string = row_data_string.strip(", ")
         create_table = f"CREATE TABLE IF NOT EXISTS {self.table_name} ({row_data_string})"
         qstion_marks = ""
 
         for _ in data:
             qstion_marks += "?, "
 
-        insert_data = f"INSERT INTO {self.table_name} VALUES (qstion_marks)"
+        qstion_marks = qstion_marks.strip(", ")
+        insert_data = f"INSERT INTO {self.table_name} VALUES ({qstion_marks})"
+        d = tuple(data.values())
         csr.execute(create_table)
         csr.execute(insert_data,tuple(data.values()))
         database.commit()
         database.close()
         print("commit status : OK")
 
-d = DB("test.sqlite3","test_table_name",row_data=["row1","row2","row3"])
-data = {
-        "row1": "1",
-        "row2" : "2",
-        "row3" : "3"
-        }
-d.write(data)
+# d = DB("test.sqlite3","test_table_name",row_data=["row1","row2","row3"])
+# data = {
+#         "row1": "1",
+#         "row2" : "2",
+#         "row3" : "3"
+#         }
+# d.write(data)

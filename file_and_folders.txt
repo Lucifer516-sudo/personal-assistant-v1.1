@@ -1,6 +1,4 @@
-../../src/
-│
-├── _main/
+src/
 │
 ├── core/
 │   │
@@ -9,7 +7,6 @@
 │   │
 │   ├── common_database_handling_statements.py
 │   ├── global_info.py
-│   ├── log_statements.py
-│   └── test.sqlite3
+│   └── log_statements.py
 │
 └── available_rich_emojis.txt

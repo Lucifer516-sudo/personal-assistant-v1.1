@@ -15,7 +15,8 @@ MAIN_DB_ROW_ONE = [
         ]
 
 # Logs DB
-LOGS_DB_NAME = "PAL-LOGS"
+LOGS_DB_FOLDER = "PAL-LOGS"
+LOGS_DB_NAME = "PAL_LOGS"
 LOGS_DB_TABLE_NAME = "LOGS"
 LOGS_DB_ROW_ONE = [
         "DATE_AND_TIME",
@@ -51,14 +52,15 @@ ACCOUNTS_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_
 
 WOLFRAMALPHA_QUERY_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{WOLFRAMALPHA_QUERY_DB_TABLE_NAME}.db")
 
-LOGS_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{LOGS_DB_NAME}.db") 
+LOGS_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{LOGS_DB_FOLDER}{os.path.sep}{LOGS_DB_NAME}.db")
 
 # All Modules Being imported
 ALL_MODULES_IMPORTED = [
         "os",
         "subprocess",
         "pathlib",
-        "math"
+        "math",
+        "rich"
         ] 
 # get the modules list 
 ALL_MODULES_IMPORTED.sort()
