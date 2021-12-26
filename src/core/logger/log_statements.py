@@ -1,7 +1,6 @@
 import datetime
-from logging import Logger
 from rich.console import Console
-from src.core.common_database_handling_statements import DB
+from src.core.database_handler.common_database_handling_statements import DB
 from src.core.global_info import LOGS_DB_PATH, LOGS_DB_ROW_ONE, LOGS_DB_TABLE_NAME 
 
 c = Console()
@@ -54,7 +53,4 @@ class Logging:
         if cout == True:
             c.print(f"[ {c.get_datetime()} ]  {log_statement}",overflow="ellipsis")
 
-
-l = Logging()
-for i in range(1,1001):
-    l.log(log_statement=f"At Epoch :: {i}",cout=True)
+        return True
