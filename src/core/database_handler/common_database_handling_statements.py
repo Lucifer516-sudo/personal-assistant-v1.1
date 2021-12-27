@@ -36,7 +36,7 @@ class DB:
         database = sqlite3.connect(self.db_name)
         csr = database.cursor()
         row_data_string = ""
-        for i in list(self.row_data):
+        for _ in list(self.row_data):
             row_data_string += f"{i} text, "
 
         row_data_string = row_data_string.strip(", ")
