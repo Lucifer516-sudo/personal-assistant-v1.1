@@ -5,8 +5,12 @@ src/
 │   ├── configurer/
 │   │   └── directories_creator.py
 │   │
-│   ├── common_database_handling_statements.py
-│   ├── global_info.py
-│   └── log_statements.py
+│   ├── database_handler/
+│   │   └── common_database_handling_statements.py
+│   │
+│   ├── logger/
+│   │   └── log_statements.py
+│   │
+│   └── global_info.py
 │
 └── available_rich_emojis.txt
