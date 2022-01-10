@@ -37,7 +37,7 @@ class DB:
         csr = database.cursor()
         row_data_string = ""
         for _ in list(self.row_data):
-            row_data_string += f"{i} text, "
+            row_data_string += f"{_} text, "
 
         row_data_string = row_data_string.strip(", ")
         create_table = f"CREATE TABLE IF NOT EXISTS {self.table_name} ({row_data_string})"
@@ -54,3 +54,12 @@ class DB:
         database.close()
 
         return True
+
+d = DB("test.sqlite3","test_table_name",row_data=["row1","row2","row3"])
+data = {                                                                
+        "row1": "1",                                                    
+        "row2" : "2",                                                   
+        "row3" : "3"                                                    
+        }                                                               
+d.write(data)                                                           
+
