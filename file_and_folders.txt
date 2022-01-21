@@ -2,10 +2,21 @@ src/
 │
 ├── core/
 │   │
+│   ├── __pycache__/
+│   │   └── global_info.cpython-310.pyc
+│   │
 │   ├── configurer/
 │   │   └── directories_creator.py
 │   │
+│   ├── data_handler/
+│   │   ├── render_text.py
+│   │   └── types_text_objs.json
+│   │
 │   ├── database_handler/
+│   │   │
+│   │   ├── __pycache__/
+│   │   │   └── common_database_handling_statements.cpython-310.pyc
+│   │   │
 │   │   └── common_database_handling_statements.py
 │   │
 │   ├── logger/

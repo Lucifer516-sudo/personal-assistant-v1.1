@@ -55,6 +55,8 @@ class DB:
 
         return True
 
+"""
+## Sample Testing Code
 d = DB("test.sqlite3","test_table_name",row_data=["row1","row2","row3"])
 data = {                                                                
         "row1": "1",                                                    
@@ -62,4 +64,4 @@ data = {
         "row3" : "3"                                                    
         }                                                               
 d.write(data)                                                           
-
+"""

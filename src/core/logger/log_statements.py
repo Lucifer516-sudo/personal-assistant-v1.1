@@ -37,15 +37,21 @@ class Logging:
         db.write(data)
         c.print(f"[ {c.get_datetime()} ]  {self.log_statement}",overflow="ellipsis")
     """
-    def log(self,log_statement="",cout=False,db_name=LOGS_DB_PATH, table_name=LOGS_DB_TABLE_NAME ,row_data=LOGS_DB_ROW_ONE):
+    def log(self,log_statement="",cout=False,log_level="INFO",db_name=LOGS_DB_PATH, table_name=LOGS_DB_TABLE_NAME ,row_data=LOGS_DB_ROW_ONE):
         """
         This is the main logger to save to the db or also output to the db
         log(self,cout=False | Bool)
+        :LOG_LEVELS:
+            -> INFO
+            -> DEBUG
+            -> WARN
+            -> CRITICAL
         """
         db = DB(db_name,table_name,row_data)
         data = {
                 row_data[0] : f"{str(datetime.datetime.now())}",
-                row_data[1] : log_statement
+                row_data[1] : log_statement,
+                row_data[2] : log_level
                 }
         
         db.write(data)
@@ -54,3 +60,7 @@ class Logging:
             c.print(f"[ {c.get_datetime()} ]  {log_statement}",overflow="ellipsis")
 
         return True
+
+
+l = Logging()
+l.log(log_statement="Testing",log_level="DEBUG")

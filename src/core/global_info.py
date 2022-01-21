@@ -20,7 +20,8 @@ LOGS_DB_NAME = "PAL_LOGS"
 LOGS_DB_TABLE_NAME = "LOGS"
 LOGS_DB_ROW_ONE = [
         "DATE_AND_TIME",
-        "LOG_STATEMENT"
+        "LOG_STATEMENT",
+        "LOG_LEVEL"
         ]
 
 

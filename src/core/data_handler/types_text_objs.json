@@ -1,0 +1,13 @@
+{
+	"RENDERINGS" : 
+	[
+	"UNCENSORED" : [
+		"TEXTS" : [ "USER_NAME", "NORMAL_INFOs" ]
+	],
+
+	"CENSORED" : [
+		"TEXTS" : [ "PASSWDs", "EMAIL_IDs", "DOBs", "INCOME"]
+	]
+
+	]
+}
