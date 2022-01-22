@@ -1,0 +1,11 @@
+# Bank Formulas #
+	[1] Simple Interest (S.I) = (p*n*r)/100 [ where n: no. of days | p: principal amt | r: rate of interest ]
+	[2] Compound Interest (C.I) = p * (1+ (r/n))**(n**t) [where p: principal | n: no. of comp. months |r: rate of interest | t: time period ]
+
+# Dearness Allowance #
+	Its the avg of D.A point of 3 months from the present month minus the avg of D.A point of previous 3 months from the 3 months of present one
+	## Linkers | Linking Factors ##
+		2016 => 2.88
+		2001 => 4.63
+		1996 => 4.93
+	

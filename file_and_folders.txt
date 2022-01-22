@@ -5,6 +5,12 @@ src/
 │   ├── __pycache__/
 │   │   └── global_info.cpython-310.pyc
 │   │
+│   ├── calculations_handler/
+│   │   ├── all_formulas.txt
+│   │   ├── bank_calculations.py
+│   │   ├── common_calculations.py
+│   │   └── formulas_required.txt
+│   │
 │   ├── configurer/
 │   │   └── directories_creator.py
 │   │
@@ -20,6 +26,10 @@ src/
 │   │   └── common_database_handling_statements.py
 │   │
 │   ├── logger/
+│   │   │
+│   │   ├── __pycache__/
+│   │   │   └── log_statements.cpython-310.pyc
+│   │   │
 │   │   └── log_statements.py
 │   │
 │   └── global_info.py
