@@ -28,6 +28,8 @@
 12. importlib
 13. wikipedia
 14. wolframalpha
+15. statistics
+16. quote
 	 
 ## Reference :
 1. [Sqlite.org](https://www.sqlitetutorial.net/sqlite-python/)
