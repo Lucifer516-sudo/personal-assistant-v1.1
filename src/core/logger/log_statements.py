@@ -37,7 +37,7 @@ class Logging:
         db.write(data)
         c.print(f"[ {c.get_datetime()} ]  {self.log_statement}",overflow="ellipsis")
     """
-    def log(self,log_statement="",cout=False,log_level="INFO",db_name=LOGS_DB_PATH, table_name=LOGS_DB_TABLE_NAME ,row_data=LOGS_DB_ROW_ONE):
+    def log(self,log_statement,cout=False,log_level="INFO",db_name=LOGS_DB_PATH, table_name=LOGS_DB_TABLE_NAME ,row_data=LOGS_DB_ROW_ONE):
         """
         This is the main logger to save to the db or also output to the db
         log(self,cout=False | Bool)

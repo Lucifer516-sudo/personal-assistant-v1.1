@@ -47,6 +47,10 @@ WOLFRAMALPHA_QUERY_DB_ROW = [
 def HOME_DIR():
     return str(pathlib.Path.home())
 
+def file_name(file):
+    files_splitted = str(file).split("/")
+    return files_splitted[-1]
+
 MAIN_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{MAIN_DB_NAME}.db")
 
 ACCOUNTS_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{ACCOUNTS_DB_NAME}")

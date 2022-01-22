@@ -1,51 +1,43 @@
 """
-## Doc String ##
-"""
+$$ IMPORTANT $$
+    @ This module should only be used while logging passwdords
 
+
+render_text.py
+--------------
+[*] this is the base class which will take care of most of the stuffs for rendering 
+    text
+
+
+"""
 from src.core.logger.log_statements import Logging # Logging() --> class
-from rich import print as rprint
+from src.core.global_info import file_name 
 
 class Text():
     def __init__(self,text):
         self.text = text
-        __type__ = "Text"
+        self.__real_text__ = self.text
+        self.__type__ = "TEXT"
+        self.logger = Logging()
+        self.log = self.logger.log
+        self.log(f"On >> [class] :: Text in ['{file_name(__file__)}']",cout=1)
+
 
     def split_by_space(self):
         return str(self.text).split(" ")
 
     def split_by_comma(self):
         return str(self.text).split(",")
-#
-#    def pprint(self):
-#        rprint(self.text)
-#        return None
-
-class Censored(Text):
-    def __init__(self,text) -> None:
-        self.text = text
 
     def censor(self):
-        # Shall only be used while logging
-        if self.__init__.__type__ == "Text" or self.__init__.__type__ == "Password" :
-            pass
-    
-        
+        self.text = str("$_C3NS0R3D_$")
+        return self.text
+
     def uncensor(self):
-        # Raises error on censor()
-        ...
+        return self.__real_text__
 
-class Password(Text):
-    def __init__(self, text):
-        super().__init__(text)
+a = Text("Test")
+print(a.censor())
 
-class Email(Text):
-    def __init__(self, text):
-        super().__init__(text)
+print(a.uncensor())
 
-class DOB(Text):
-    def __init__(self, text):
-        super().__init__(text)
-
-c = Censored("test text")
-print((c.censor))
-#print(c.censor())
