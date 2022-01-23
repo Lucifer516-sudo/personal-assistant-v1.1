@@ -6,7 +6,7 @@ DB_FOLDER_NAME = "PAL-DB"
 ACCOUNTS_DB_NAME = "PAL-ACCOUNTS-DB"  # Folder
 
 # Main DB :
-MAIN_DB_NAME = "PAL_MAIN" # File
+MAIN_DB_NAME = "PAL_MAIN"  # File
 MAIN_DB_TABLE_NAME = "ALL_ACCOUNTS_NAME"
 MAIN_DB_ROW_ONE = [
         "ACCOUNT_NAME",
@@ -35,7 +35,7 @@ ACCOUNT_DB_ROW_ONE = [
         ]
 
 # Wolframalpha DB :
-WOLFRAMALPHA_QUERY_DB_NAME = "WOLFRAMALPHA_QUERY_DB" # File
+WOLFRAMALPHA_QUERY_DB_NAME = "WOLFRAMALPHA_QUERY_DB"  # File
 WOLFRAMALPHA_QUERY_DB_TABLE_NAME = "WOLFRAMALPHA_QUERY_INFO"
 WOLFRAMALPHA_QUERY_DB_ROW = [
         "QUERY_DATE",
@@ -44,12 +44,15 @@ WOLFRAMALPHA_QUERY_DB_ROW = [
         "QUERY_RESULT"
         ]
 
+
 def HOME_DIR():
     return str(pathlib.Path.home())
+
 
 def file_name(file):
     files_splitted = str(file).split("/")
     return files_splitted[-1]
+
 
 MAIN_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{MAIN_DB_NAME}.db")
 
@@ -66,8 +69,9 @@ ALL_MODULES_IMPORTED = [
         "pathlib",
         "math",
         "rich"
-        ] 
-# get the modules list 
+        ]
+
+# get the modules list
 ALL_MODULES_IMPORTED.sort()
 
 SLEEP_INTERVALS = [
@@ -121,4 +125,4 @@ SLEEP_INTERVALS = [
     0.3144640908555709,
     0.7352501092832768,
     0.6899224941248204
-        ]
+]

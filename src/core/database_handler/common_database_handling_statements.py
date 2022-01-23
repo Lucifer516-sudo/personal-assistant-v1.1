@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class DB:
     """
     Got an new approach towards this project and so this class will hold most or
@@ -21,14 +22,14 @@ class DB:
     -----------------------------------------------------------------------------
     """
 
-    def __init__(self,db_name: str, table_name: str, row_data: list) -> None:
+    def __init__(self, db_name: str, table_name: str, row_data: list) -> None:
         self.db_name = db_name
         self.table_name = table_name
         self.row_data = row_data
 
-    def write(self,data:dict):
+    def write(self, data: dict):
         """
-        Common statements :
+        Common statements:
             table creation => CREATE TABLE IF NOT EXISTS `table name` (`row1` type, `row2` type, ... 'rowx' type)
             insertion of data => INSERT INTO `table name` VALUES (?, ?, ?, ... ?)
 
@@ -49,19 +50,8 @@ class DB:
         qstion_marks = qstion_marks.strip(", ")
         insert_data = f"INSERT INTO {self.table_name} VALUES ({qstion_marks})"
         csr.execute(create_table)
-        csr.execute(insert_data,tuple(data.values()))
+        csr.execute(insert_data, tuple(data.values()))
         database.commit()
         database.close()
 
         return True
-
-"""
-## Sample Testing Code
-d = DB("test.sqlite3","test_table_name",row_data=["row1","row2","row3"])
-data = {                                                                
-        "row1": "1",                                                    
-        "row2" : "2",                                                   
-        "row3" : "3"                                                    
-        }                                                               
-d.write(data)                                                           
-"""
