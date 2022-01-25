@@ -21,19 +21,23 @@ class Text():
         self.__type__ = "TEXT"
         self.logger = Logging()
         self.log = self.logger.log
-        self.log(f"On >> [class] :: Text in ['{file_name(__file__)}']", cout=1)
+        self.log(f"On >> class: Text :: Text.__init__ << {file_name(__file__)}", cout=1)
 
     def split_by_space(self):
+        self.log(f"On >> class: Text :: Text.split_by_space << {file_name(__file__)}", cout=1)
         return str(self.text).split(" ")
 
     def split_by_comma(self):
+        self.log(f"On >> class: Text :: Text.split_by_comma << {file_name(__file__)}", cout=1)
         return str(self.text).split(",")
 
     def censor(self):
+        self.log(f"On >> class: Text :: Text.censor << {file_name(__file__)}", cout=1)
         self.text = str("$_C3NS0R3D_$")
         return self.text
 
     def uncensor(self):
+        self.log(f"On >> class: Text :: Text.uncensor << {file_name(__file__)}", cout=1)
         return self.__real_text__
 
 

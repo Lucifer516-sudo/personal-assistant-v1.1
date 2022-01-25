@@ -11,7 +11,7 @@ class Hash:
         self.log = self.logger.log
 
     def hash(self):
-        self.log(log_statement=f"On >> [method] :: Hash.hash [{file_name(__file__)}]")
+        self.log(log_statement=f"On >> [method] :: Hash.hash << [{file_name(__file__)}]")
         return hashlib.sha512(self.text).hexdigest().encode()
 
 

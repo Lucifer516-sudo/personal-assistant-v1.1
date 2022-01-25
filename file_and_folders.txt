@@ -3,7 +3,7 @@ src/
 ├── core/
 │   │
 │   ├── __pycache__/
-│   │   └── global_info.cpython-310.pyc
+│   │   └── global_info.cpython-39.pyc
 │   │
 │   ├── calculations_handler/
 │   │   ├── all_formulas.txt
@@ -15,20 +15,22 @@ src/
 │   │   └── directories_creator.py
 │   │
 │   ├── data_handler/
+│   │   ├── hasher.py
 │   │   ├── render_text.py
+│   │   ├── test.py
 │   │   └── types_text_objs.json
 │   │
 │   ├── database_handler/
 │   │   │
 │   │   ├── __pycache__/
-│   │   │   └── common_database_handling_statements.cpython-310.pyc
+│   │   │   └── common_database_handling_statements.cpython-39.pyc
 │   │   │
 │   │   └── common_database_handling_statements.py
 │   │
 │   ├── logger/
 │   │   │
 │   │   ├── __pycache__/
-│   │   │   └── log_statements.cpython-310.pyc
+│   │   │   └── log_statements.cpython-39.pyc
 │   │   │
 │   │   └── log_statements.py
 │   │
