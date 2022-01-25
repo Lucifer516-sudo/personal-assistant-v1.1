@@ -7,10 +7,10 @@
 <b>PROJECT STATUS </b>     | <b><i><u>UNDER ACTIVE DEVELOPMENT</u></i></b>
 
 ### Main Functions :
-1. Search Wikipedia with python wikipedia module.
-2. Give intelligent replies using Wolframalpha engine.
-3. Have information about budget.
-4. Have different accounts 
+1. ☑ Search Wikipedia with python wikipedia module.
+2. ☑ Give intelligent replies using Wolframalpha engine.
+3. ☑ Have information about budget.
+4. ☑ Have different accounts 
 
 ### Modules Being Used/Imported
 1. os
