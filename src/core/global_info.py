@@ -1,5 +1,7 @@
 import os
 import pathlib
+import datetime
+import traceback
 
 FOLDER_NAME = "PAL"
 DB_FOLDER_NAME = "PAL-DB"
@@ -53,6 +55,10 @@ def file_name(file):
     files_splitted = str(file).split("/")
     return files_splitted[-1]
 
+def format_name(user_name):
+        return  user_name +"__" + str(((str(datetime.datetime.now())).replace(":","~")).split(".")[0])
+
+
 
 MAIN_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{MAIN_DB_NAME}.db")
 
@@ -74,6 +80,12 @@ ALL_MODULES_IMPORTED = [
 # get the modules list
 ALL_MODULES_IMPORTED.sort()
 
+# def blr_plt_l_stmt(_class__, filename):
+#     func_name = traceback.extract_stack(None, 2)[0][2]
+# 
+#     blr_plate = f"On >> class: {_class__.__name__} :: {_class__.__name__}.{func_name()} << {file_name((filename))}"
+#     return blr_plate
+# 
 SLEEP_INTERVALS = [
     0.012720191586123919,
     0.7655287147407026,

@@ -1,3 +1,7 @@
+"""
+Boiler Plate Log Statement:
+    On >> [class: ClassName] :: ClassName.MethodName << FileName.py
+"""
 import datetime
 from rich.console import Console
 from src.core.database_handler.common_database_handling_statements import DB
@@ -10,7 +14,9 @@ class Logging:
     """
     Created this class just bcoz i currently dont know how to log the log info to a file tho
     """
-    def log(self, log_statement, cout=False, log_level="INFO", db_name=LOGS_DB_PATH, table_name=LOGS_DB_TABLE_NAME, row_data=LOGS_DB_ROW_ONE):
+    def __init__(self,cout) -> None:
+        self.cout = cout
+    def log(self, log_statement, log_level="INFO", db_name=LOGS_DB_PATH, table_name=LOGS_DB_TABLE_NAME, row_data=LOGS_DB_ROW_ONE):
         """
         This is the main logger to save to the db or also output to the db
         log(self,cout=False | Bool)
@@ -29,7 +35,9 @@ class Logging:
 
         db.write(data)
 
-        if cout:
+        if self.cout:
             c.print(f"[ {c.get_datetime()} ]  {log_statement}", overflow="ellipsis")
 
         return True
+
+Logging(1).log("test")
