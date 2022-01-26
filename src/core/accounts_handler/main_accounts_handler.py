@@ -1,3 +1,5 @@
+from src.core.data_handler.hasher import Hash
+from src.core.data_handler.render_text import Text
 from src.core.global_info import ACCOUNT_DB_TABLE_NAME, ACCOUNTS_DB_PATH, ACCOUNT_DB_ROW_ONE, format_name
 from src.core.logger.log_statements import Logging
 from src.core.database_handler.common_database_handling_statements import DB
@@ -29,12 +31,14 @@ class Account:
         AC_NAME = format_name(self.user_name)
         ACCOUNTS_DB_PATH_ = f"{ACCOUNTS_DB_PATH}{os.path.sep}{AC_NAME}.db"
         DataBase = DB(ACCOUNTS_DB_PATH_, ACCOUNT_DB_TABLE_NAME, ACCOUNT_DB_ROW_ONE) 
+        hexhash = Hash(self.user_passwd).hash()
         data = {
                 ACCOUNT_DB_ROW_ONE[0]: self.user_name,
                 ACCOUNT_DB_ROW_ONE[1]: self.user_email,
                 ACCOUNT_DB_ROW_ONE[2]: self.user_dob,
-                ACCOUNT_DB_ROW_ONE[3]: self.user_passwd,
+                ACCOUNT_DB_ROW_ONE[3]: hexhash,
                 }
+        self.log(f"Writing data: {self.user_name}, {}, {}, {}")
         DataBase.write(data)
 
 
