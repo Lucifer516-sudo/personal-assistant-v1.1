@@ -18,18 +18,6 @@ class Account:
         self.log = self.logger.log
 
     def create_account(self):
-        """ Create a/c if there is not one
-        if not check_for_account(name):str
-            formatted_account_db_name = str(formatted_name(name))
-            db = sqlite3.connect(f"{ACCOUNTS_DB_PATH}{os.path.sep}{formatted_account_db_name}.db")
-            c = db.cursor()
-            create_ac_table = "create table if not exists ACCOUNT_DETAILS (USER_NAME text, USER_EMAIL text, USER_DOB text, USER_PASSWD text)"
-            c.execute(create_ac_table) # creating an a/c if not exists
-            create_ac = "insert into ACCOUNT_DETAILS values (?, ?, ?, ?)"
-            c.execute(create_ac,(name, email, dob, passwd))
-            db.commit()
-            db.close()
-            print(f"Created the db file with name --> {formatted_account_db_name}\nCommit --> OK\nDB Closing --> OK)"""
         AC_NAME = format_name(self.user_name)
         ACCOUNTS_DB_PATH_ = f"{ACCOUNTS_DB_PATH}{os.path.sep}{AC_NAME}.db"
         DataBase = DB(ACCOUNTS_DB_PATH_, ACCOUNT_DB_TABLE_NAME, ACCOUNT_DB_ROW_ONE)
@@ -43,10 +31,10 @@ class Account:
         self.log(f"Writing data: {self.user_name}, {self.user_email}, {self.user_dob}, {Text(self.user_passwd).censor()}")
         DataBase.write(data)
 
-name = "Test Name"
-email = "test@gmail.com"
-dob = "02-09-2005"
-passwd = 'passwd'
-
-Account(name,email,dob,passwd).create_account()
-print(Text(name).censor())
+# name = "Test Name"
+# email = "test@gmail.com"
+# dob = "02-09-2005"
+# passwd = 'passwd'
+# 
+# Account(name,email,dob,passwd).create_account()
+# print(Text(name).censor())
