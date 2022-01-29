@@ -47,6 +47,7 @@ ACCOUNT_DB_ROW_ONE = [
 #         ]
 #
 
+
 def HOME_DIR():
     return str(pathlib.Path.home())
 
@@ -55,10 +56,10 @@ def file_name(file):
     files_splitted = str(file).split("/")
     return files_splitted[-1]
 
-def format_name(user_name: str):
-    user_name = user_name.replace(" ","_")
-    return  user_name +"__" + str(((str(datetime.datetime.now())).replace(":","~")).split(".")[0])
 
+def format_name(user_name: str):
+    user_name = user_name.replace(" ", "_")
+    return user_name + "__" + str(((str(datetime.datetime.now())).replace(":", "~")).split(".")[0])
 
 
 MAIN_DB_PATH = str(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{MAIN_DB_NAME}.db")

@@ -1,7 +1,7 @@
 from statistics import fmean
 from typing import List
 from src.core.logger.log_statements import Logging
-from src.core.global_info import file_name 
+from src.core.global_info import file_name
 
 
 class Statistics():
@@ -19,5 +19,5 @@ class Statistics():
         self.log(f"On >> class: Statistics :: Statistics.percentile << {file_name(__file__)}")
         return (x/total_x) * 100
 
-print(Statistics().avg(values=[1.0, 2.0]))
 
+print(Statistics().avg(values=[1.0, 2.0]))

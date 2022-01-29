@@ -27,7 +27,7 @@ class DB:
         self.table_name = table_name
         self.row_data = row_data
 
-    def write(self, data: dict):
+    def create_table_if_not_exists(self):
         database = sqlite3.connect(self.db_name)
         csr = database.cursor()
         row_data_string = ""
@@ -36,6 +36,20 @@ class DB:
 
         row_data_string = row_data_string.strip(", ")
         create_table = f"CREATE TABLE IF NOT EXISTS {self.table_name} ({row_data_string})"
+        csr.execute(create_table)
+        database.commit()
+        database.close()
+
+    def write(self, data: dict):
+        database = sqlite3.connect(self.db_name)
+        csr = database.cursor()
+#         row_data_string = ""
+#         for _ in list(self.row_data):
+#             row_data_string += f"{_} text, "
+
+#         row_data_string = row_data_string.strip(", ")
+#         create_table = f"CREATE TABLE IF NOT EXISTS {self.table_name} ({row_data_string})"
+        self.create_table_if_not_exists()
         qstion_marks = ""
 
         for _ in data:
@@ -43,7 +57,6 @@ class DB:
 
         qstion_marks = qstion_marks.strip(", ")
         insert_data = f"INSERT INTO {self.table_name} VALUES ({qstion_marks})"
-        csr.execute(create_table)
         csr.execute(insert_data, tuple(data.values()))
         database.commit()
         database.close()
@@ -51,9 +64,10 @@ class DB:
         return True
 
     def search(self):
+        self.create_table_if_not_exists()
         database = sqlite3.connect(self.db_name)
         c = database.cursor()
-        data = c.execute("SELECT * FROM {self.table_name}").fetchall()
+        data = c.execute(f"SELECT * FROM {self.table_name}").fetchall()
         database.close()
         return data
 

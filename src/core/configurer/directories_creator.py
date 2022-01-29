@@ -11,7 +11,6 @@ from src.core.global_info import (
     FOLDER_NAME,
     HOME_DIR,
     MAIN_DB_NAME,
-    WOLFRAMALPHA_QUERY_DB_NAME,
     LOGS_DB_NAME,
     LOGS_DB_FOLDER,
 )
@@ -64,9 +63,9 @@ def make_the_home_dir_to_save_the_db():
             os.mkdir(f"{ACCOUNTS_DB_PATH}")
             accounts_database_created = False
 
-        if f"{WOLFRAMALPHA_QUERY_DB_NAME}.db" not in os.listdir(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}"):
-            os.system(f"touch {HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{WOLFRAMALPHA_QUERY_DB_NAME}.db")
-            wolframalpha_db_created = False
+# if f"{WOLFRAMALPHA_QUERY_DB_NAME}.db" not in os.listdir(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}"):
+# os.system(f"touch {HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{DB_FOLDER_NAME}{os.path.sep}{WOLFRAMALPHA_QUERY_DB_NAME}.db")
+# wolframalpha_db_created = False
 
         if LOGS_DB_FOLDER not in os.listdir(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}"):
             os.mkdir(f"{HOME_DIR()}{os.path.sep}{FOLDER_NAME}{os.path.sep}{LOGS_DB_FOLDER}")

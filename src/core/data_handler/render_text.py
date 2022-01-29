@@ -15,7 +15,6 @@ from src.core.global_info import file_name
 import traceback
 
 
-
 class Text():
     def __init__(self, text):
         self.text = text
@@ -43,7 +42,7 @@ class Text():
         return self.__real_text__
 
     def class_name_and_method(self):
-        return __class__.__name__ , traceback.extract_stack(None, 2)[0][-1][-3]
+        return __class__.__name__, traceback.extract_stack(None, 2)[0][-1][-3]
 
 
 a = Text("Test")
