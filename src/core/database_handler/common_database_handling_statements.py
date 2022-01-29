@@ -28,12 +28,6 @@ class DB:
         self.row_data = row_data
 
     def write(self, data: dict):
-        """
-        Common statements:
-            table creation => CREATE TABLE IF NOT EXISTS `table name` (`row1` type, `row2` type, ... 'rowx' type)
-            insertion of data => INSERT INTO `table name` VALUES (?, ?, ?, ... ?)
-
-        """
         database = sqlite3.connect(self.db_name)
         csr = database.cursor()
         row_data_string = ""
@@ -55,3 +49,16 @@ class DB:
         database.close()
 
         return True
+
+    def search(self):
+        database = sqlite3.connect(self.db_name)
+        c = database.cursor()
+        data = c.execute("SELECT * FROM {self.table_name}").fetchall()
+        database.close()
+        return data
+
+    def update(self):
+        pass
+
+    def delete(self):
+        pass

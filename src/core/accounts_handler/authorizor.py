@@ -3,5 +3,5 @@ class Login:
         self.user_name = user_name
         self.user_passwd = user_passwd
 
-
-
+    def authorize(self):
+        pass  # have to connect to db and search the data
