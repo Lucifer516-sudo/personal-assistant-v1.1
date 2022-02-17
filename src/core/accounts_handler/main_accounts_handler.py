@@ -47,9 +47,9 @@ class Account:
             del DataBase
             data_main = {
                      MAIN_DB_ROW_ONE[0]: self.user_name,
-                     MAIN_DB_ROW_ONE[2]: str(datetime.now()),
-                     MAIN_DB_ROW_ONE[3]: ACCOUNTS_DB_PATH_,
-                     MAIN_DB_ROW_ONE[4]: hexhash,
+                     MAIN_DB_ROW_ONE[1]: str(datetime.now()),
+                     MAIN_DB_ROW_ONE[2]: ACCOUNTS_DB_PATH_,
+                     MAIN_DB_ROW_ONE[3]: hexhash,
                      }
             DataBaseMain.write(data_main)
             return True
@@ -57,9 +57,9 @@ class Account:
             return False
 
 
-name = "Test Name"
-email = "test@gmail.com"
-dob = "02-09-2005"
-passwd = 'passwd'
-Account(name, email, dob, passwd).create_account()
-print(Text(name).censor())
+# name = "Test Name 2"
+# email = "test@gmail.com"
+# dob = "02-09-2005"
+# passwd = 'passwd'
+# Account(name, email, dob, passwd).create_account()
+# print(Text(name).censor())
