@@ -13,14 +13,16 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.9
+    - name: Some Common Infos
+      run: |
+        uname -a
+        pwd
+        whoami
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        cd ~
-        echo $(pwd)
-        sleep 5
     - name: Analysing the code with pylint
       run: |
         python -m pylint --fail-under=10 `find -regextype egrep -regex '(.*.py)$'` |
