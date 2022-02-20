@@ -13,11 +13,11 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.9
-    - name: Some Common Infos
+    - name: Pre-Run [or] Pre-Setup
       run: |
         export PYTHONPATH='/home/runner/work/personal-assistant-v1.1/personal-assistant-v1.1/'
         python3 /home/runner/work/personal-assistant-v1.1/personal-assistant-v1.1/src/core/configurer/directories_creator.py
-        pip3 install rptree
+        pip3 install rptree loguru rich 
         ls -alh ~
         rptree ~/PAL
     - name: Install dependencies
