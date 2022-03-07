@@ -4,8 +4,8 @@ Boiler Plate Log Statement:
 """
 import datetime
 from rich.console import Console
-from src.core.database_handler.common_database_handling_statements import DB
-from src.core.global_info import LOGS_DB_PATH, LOGS_DB_ROW_ONE, LOGS_DB_TABLE_NAME
+from ..database_handler.common_database_handling_statements import DB
+from ..global_info import LOGS_DB_PATH, LOGS_DB_ROW_ONE, LOGS_DB_TABLE_NAME
 
 c = Console()
 

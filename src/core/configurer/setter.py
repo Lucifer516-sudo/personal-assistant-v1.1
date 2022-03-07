@@ -4,7 +4,7 @@ import platform
 
 from loguru import logger as lgr
 
-from src.core.global_info import (
+from ..global_info import (
     ACCOUNTS_DB_NAME,
     ACCOUNTS_DB_PATH,
     DB_FOLDER_NAME,
@@ -79,9 +79,12 @@ def make_the_home_dir_to_save_the_db():
 
         return configured
 
-
-def make_it_as_a_executable_program():
+def copy_program_folder_to_specified_directory():
     pass
 
-
-make_the_home_dir_to_save_the_db()
+def make_it_as_a_executable_program():
+    if make_the_home_dir_to_save_the_db():
+        files_n_folders_ = "personal-assistant-v1.1" in os.listdir(os.getcwd()) 
+        site_packs = str(os.getwd()).find("/")
+        if files_n_folders_:
+            os.system(f"cp -r {os.getcwd()}/personal-assistant-v1.1 /usr/lib/python3.10/site-packages/pal/")

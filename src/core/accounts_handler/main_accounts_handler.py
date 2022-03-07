@@ -1,8 +1,8 @@
-from src.core.data_handler.hasher import Hash
-from src.core.data_handler.render_text import Text
-from src.core.global_info import ACCOUNT_DB_TABLE_NAME, ACCOUNTS_DB_PATH, ACCOUNT_DB_ROW_ONE, format_name, MAIN_DB_PATH, MAIN_DB_TABLE_NAME, MAIN_DB_ROW_ONE
-from src.core.logger.log_statements import Logging
-from src.core.database_handler.common_database_handling_statements import DB
+from ..data_handler.hasher import Hash
+from ..data_handler.render_text import Text
+from ..global_info import ACCOUNT_DB_TABLE_NAME, ACCOUNTS_DB_PATH, ACCOUNT_DB_ROW_ONE, format_name, MAIN_DB_PATH, MAIN_DB_TABLE_NAME, MAIN_DB_ROW_ONE
+from ..logger.log_statements import Logging
+from ..database_handler.common_database_handling_statements import DB
 import os
 from datetime import datetime
 from rich.traceback import install

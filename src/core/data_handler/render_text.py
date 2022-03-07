@@ -10,8 +10,8 @@ render_text.py
 
 
 """
-from src.core.logger.log_statements import Logging   # Logging() --> class
-from src.core.global_info import file_name
+from ..logger.log_statements import Logging   # Logging() --> class
+from ..global_info import file_name
 import traceback
 
 
