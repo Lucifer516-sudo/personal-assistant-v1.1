@@ -1,7 +1,7 @@
 from statistics import fmean
 from typing import List
-from ..logger.log_statements import Logging
-from ..global_info import file_name
+from src.core.logger.log_statements import Logging
+from src.core.global_info import file_name
 
 
 class Statistics():

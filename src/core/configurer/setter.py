@@ -1,10 +1,12 @@
 import os
+import sys
 import pathlib
 import platform
 
 from loguru import logger as lgr
+from rich.traceback import install
 
-from ..global_info import (
+from src.core.global_info import (
     ACCOUNTS_DB_NAME,
     ACCOUNTS_DB_PATH,
     DB_FOLDER_NAME,
@@ -77,14 +79,34 @@ def make_the_home_dir_to_save_the_db():
         else:
             configured = False
 
+
         return configured
 
 def copy_program_folder_to_specified_directory():
     pass
 
+
+main_program_statement = """
+#!/data/data/com.termux/files/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+
 def make_it_as_a_executable_program():
-    if make_the_home_dir_to_save_the_db():
-        files_n_folders_ = "personal-assistant-v1.1" in os.listdir(os.getcwd()) 
-        site_packs = str(os.getwd()).find("/")
-        if files_n_folders_:
-            os.system(f"cp -r {os.getcwd()}/personal-assistant-v1.1 /usr/lib/python3.10/site-packages/pal/")
+    make_the_home_dir_to_save_the_db()
+    if True:
+        print("Made The Exe Dir...")
+#        files_n_folders_ = "personal-assistant-v1.1" in os.listdir(os.getcwd()+"/")
+#        site_packs = str(os.getcwd()).find("/")
+#        print(f"files_n_folders_: {files_n_folders_}\nsite_packs: {site_packs}\ncwd: {os.getcwd()}")
+#        print(site_packs)
+        if True:
+            os.system(f"cp -r {os.getcwd()}/project/personal-assistant-v1.1/src {sys.exec_prefix}/lib/python3.10/site-packages/pal/")
+            os.system(f"touch {sys.exec_prefix}/bin/pal")
+            with open(f"{sys.exec_prefix}/bin/pal","w+") as f:
+                f.write(main_program_statement)
+                print(f"wrote\n{main_program_statement}\n...")
+
+def main_setter():
+    make_the_home_dir_to_save_the_db()
+    make_it_as_a_executable_program()
+    return True

@@ -1,7 +1,6 @@
-from ..calculations_handler.common_calculations import Statistics
-from ..logger.log_statements import Logging
-from ..global_info import file_name
-
+from src.core.calculations_handler.common_calculations import Statistics
+from src.core.logger.log_statements import Logging
+from src.core.global_info import file_name
 
 class BankManager():
     def __init__(self) -> None:
