@@ -17,7 +17,7 @@ jobs:
       run: |
         export PYTHONPATH='/home/runner/work/personal-assistant-v1.1/personal-assistant-v1.1/'
         pip3 install rptree loguru rich 
-        python3 /home/runner/work/personal-assistant-v1.1/personal-assistant-v1.1/src/core/configurer/directories_creator.py
+        python3 /home/runner/work/personal-assistant-v1.1/personal-assistant-v1.1/src/core/configurer/setter.py
         ls -alh ~
         rptree ~/PAL
     - name: Install dependencies
